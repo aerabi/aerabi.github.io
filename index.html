@@ -1,36 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Mohammad‑Ali A’râbi — Docker Captain, Author, Speaker</title>
-    <meta content="Senior Backend Engineer at JobRad. Docker Captain, Snyk Ambassador, community builder, and author of Docker and Kubernetes Security." name="description"/>
+    <meta
+      content="Senior Backend Engineer at JobRad. Docker Captain, Snyk Ambassador, community builder, and author of Docker and Kubernetes Security."
+      name="description"
+    />
     <!-- Open Graph -->
-    <meta content="Mohammad‑Ali A’râbi — Docker Captain, Author, Speaker" property="og:title"/>
-    <meta content="Senior Backend Engineer at JobRad. Docker Captain, Snyk Ambassador, community builder, and author of Docker and Kubernetes Security." property="og:description"/>
-    <meta content="website" property="og:type"/>
-    <meta content="https://aerabi.com" property="og:url"/>
-    <meta content="https://aerabi.com/me-red.jpeg" property="og:image"/>
+    <meta content="Mohammad‑Ali A’râbi — Docker Captain, Author, Speaker" property="og:title" />
+    <meta
+      content="Senior Backend Engineer at JobRad. Docker Captain, Snyk Ambassador, community builder, and author of Docker and Kubernetes Security."
+      property="og:description"
+    />
+    <meta content="website" property="og:type" />
+    <meta content="https://aerabi.com" property="og:url" />
+    <meta content="https://aerabi.com/me-red.jpeg" property="og:image" />
     <!-- Favicon (optional) -->
-    <link href="/favicon.ico" rel="icon"/>
+    <link href="/favicon.ico" rel="icon" />
     <!-- Tailwind via CDN (no build needed) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ["Inter", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", "Helvetica Neue", "Arial", "sans-serif"],
-                    },
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: [
+                "Inter",
+                "system-ui",
+                "-apple-system",
+                "Segoe UI",
+                "Roboto",
+                "Ubuntu",
+                "Cantarell",
+                "Noto Sans",
+                "Helvetica Neue",
+                "Arial",
+                "sans-serif",
+              ],
+            },
+          },
+        },
+      };
     </script>
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
     <!-- React via CDN -->
     <script crossorigin="" src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin="" src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
@@ -38,266 +59,527 @@
     <!-- Babel for inline JSX (static hosting friendly) -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <style>
-        /* Smooth scroll for anchor links */
-        html { scroll-behavior: smooth; }
+      /* Smooth scroll for anchor links */
+      html {
+        scroll-behavior: smooth;
+      }
     </style>
     <!-- Structured Data -->
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Mohammad-Ali A’râbi",
-            "url": "https://aerabi.com",
-            "jobTitle": "Senior Backend Engineer",
-            "worksFor": {"@type": "Organization", "name": "JobRad GmbH"},
-            "knowsAbout": ["Docker", "Kubernetes", "Software Supply Chain Security", "CI/CD", "Git"],
-            "sameAs": [
-                "https://www.docker.com/captains/mohammad-ali-arabi/",
-                "https://sessionize.com/aerabi/",
-                "https://aerabi.medium.com/",
-                "https://github.com/aerabi/",
-                "https://www.linkedin.com/in/aerabi/",
-                "https://x.com/MohammadAliEN"
-            ]
-        }
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mohammad-Ali A’râbi",
+        "url": "https://aerabi.com",
+        "jobTitle": "Senior Backend Engineer",
+        "worksFor": { "@type": "Organization", "name": "JobRad GmbH" },
+        "knowsAbout": ["Docker", "Kubernetes", "Software Supply Chain Security", "CI/CD", "Git"],
+        "sameAs": [
+          "https://www.docker.com/captains/mohammad-ali-arabi/",
+          "https://sessionize.com/aerabi/",
+          "https://aerabi.medium.com/",
+          "https://github.com/aerabi/",
+          "https://www.linkedin.com/in/aerabi/",
+          "https://x.com/MohammadAliEN"
+        ]
+      }
     </script>
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "url": "https://aerabi.com",
-            "name": "Mohammad-Ali A’râbi — Docker Captain, Author, Speaker",
-            "publisher": {
-                "@type": "Person",
-                "name": "Mohammad-Ali A’râbi"
-            }
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://aerabi.com",
+        "name": "Mohammad-Ali A’râbi — Docker Captain, Author, Speaker",
+        "publisher": {
+          "@type": "Person",
+          "name": "Mohammad-Ali A’râbi"
         }
+      }
     </script>
-</head>
-<body class="font-sans antialiased text-slate-900 bg-white">
-<!-- Nav -->
-<header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
-    <div class="max-w-6xl mx-auto px-4">
+    <meta content="Portrait of Mohammad‑Ali A’râbi wearing a red hat" property="og:image:alt" />
+    <meta content="aerabi.com" property="og:site_name" />
+    <meta content="en_US" property="og:locale" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="@MohammadAliEN" name="twitter:site" />
+    <meta content="Mohammad‑Ali A’râbi — Docker Captain, Author, Speaker" name="twitter:title" />
+    <meta
+      content="Senior Backend Engineer at JobRad. Docker Captain, Snyk Ambassador, community builder, and author of Docker and Kubernetes Security."
+      name="twitter:description"
+    />
+    <meta content="https://aerabi.com/me-red.jpeg" name="twitter:image" />
+    <meta content="Portrait of Mohammad‑Ali A’râbi wearing a red hat" name="twitter:image:alt" />
+  </head>
+  <body class="font-sans antialiased text-slate-900 bg-white">
+    <!-- Nav -->
+    <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-4">
         <div class="flex items-center justify-between h-16">
-            <a class="flex items-center gap-3" href="#home">
-                <div class="w-9 h-9 rounded-full bg-slate-900 text-white grid place-items-center text-sm font-bold">MA</div>
-                <span class="hidden sm:block font-semibold">Mohammad‑Ali A’râbi</span>
-            </a>
-            <nav class="hidden md:flex items-center gap-6 text-sm">
-                <a class="hover:opacity-70" href="#about">About</a>
-                <a class="hover:opacity-70" href="#speaking">Speaking</a>
-                <a class="hover:opacity-70" href="#writing">Writing</a>
-                <a class="hover:opacity-70" href="#projects">Projects</a>
-                <a class="hover:opacity-70" href="#contact">Contact</a>
-            </nav>
-            <a class="ml-4 inline-flex items-center rounded-xl border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-50" href="#contact">Invite me to speak</a>
+          <a class="flex items-center gap-3" href="#home">
+            <div class="w-9 h-9 rounded-full bg-slate-900 text-white grid place-items-center text-sm font-bold">MA</div>
+            <span class="hidden sm:block font-semibold">Mohammad‑Ali A’râbi</span>
+          </a>
+          <nav class="hidden md:flex items-center gap-6 text-sm">
+            <a class="hover:opacity-70" href="#about">About</a>
+            <a class="hover:opacity-70" href="#speaking">Speaking</a>
+            <a class="hover:opacity-70" href="#writing">Writing</a>
+            <a class="hover:opacity-70" href="#projects">Projects</a>
+            <a class="hover:opacity-70" href="#contact">Contact</a>
+          </nav>
+          <a
+            class="ml-4 inline-flex items-center rounded-xl border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-50"
+            href="#contact"
+            >Invite me to speak</a
+          >
         </div>
-    </div>
-</header>
-<!-- Hero -->
-<section class="relative" id="home">
-    <div class="max-w-6xl mx-auto px-4 pt-14 pb-10 md:pt-20 md:pb-16">
+      </div>
+    </header>
+    <!-- Hero -->
+    <section class="relative" id="home">
+      <div class="max-w-6xl mx-auto px-4 pt-14 pb-10 md:pt-20 md:pb-16">
         <div class="grid md:grid-cols-2 gap-10 items-center">
-            <div>
-                <h1 class="text-3xl md:text-5xl font-extrabold leading-tight tracking-tight">Docker Captain, Security Author, Community Builder.</h1>
-                <p class="mt-4 text-lg text-slate-600 max-w-prose">Mohammad‑Ali A’râbi is a Senior Backend Engineer at JobRad, Docker Captain, Snyk Ambassador, and founder of the Black Forest Docker community. He writes <em>Docker and Kubernetes Security</em> and speaks at developer conferences across Europe.</p>
-                <div class="mt-6 flex flex-wrap gap-3">
-                    <a class="inline-flex items-center rounded-xl bg-slate-900 text-white px-4 py-2 text-sm font-semibold hover:opacity-90" href="#writing">Read the book blurb</a>
-                    <a class="inline-flex items-center rounded-xl border border-slate-300 px-4 py-2 text-sm hover:bg-slate-50" href="#speaking">Upcoming talks</a>
-                </div>
-                <div class="mt-6 flex items-center gap-4 text-slate-500 text-sm">
-                    <a class="hover:text-slate-900" href="https://aerabi.medium.com" rel="noopener" target="_blank">Medium</a>
-                    <a class="hover:text-slate-900" href="https://www.linkedin.com/in/aerabi/" rel="noopener" target="_blank">LinkedIn</a>
-                    <a class="hover:text-slate-900" href="https://x.com/MohammadAliEN" rel="noopener" target="_blank">X/Twitter</a>
-                    <a class="hover:text-slate-900" href="https://bsky.app/profile/aerabi.com" rel="noopener" target="_blank">Bluesky</a>
-                </div>
+          <div>
+            <h1 class="text-3xl md:text-5xl font-extrabold leading-tight tracking-tight">
+              Docker Captain, Security Author, Community Builder.
+            </h1>
+            <p class="mt-4 text-lg text-slate-600 max-w-prose">
+              Mohammad‑Ali A’râbi is a Senior Backend Engineer at JobRad, Docker Captain, Snyk Ambassador, and founder
+              of the Black Forest Docker community. He writes <em>Docker and Kubernetes Security</em> and speaks at
+              developer conferences across Europe.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a
+                class="inline-flex items-center rounded-xl bg-slate-900 text-white px-4 py-2 text-sm font-semibold hover:opacity-90"
+                href="#writing"
+                >Read the book blurb</a
+              >
+              <a
+                class="inline-flex items-center rounded-xl border border-slate-300 px-4 py-2 text-sm hover:bg-slate-50"
+                href="#speaking"
+                >Upcoming talks</a
+              >
             </div>
-            <div class="md:justify-self-end">
-                <div class="md:w-[420px] aspect-square rounded-full overflow-hidden shadow-2xl border border-slate-200">
-                    <img alt="Mohammad‑Ali A’râbi — Docker Captain headshot" class="w-full h-full object-cover" src="https://aerabi.com/me-red.jpeg"/>
-                </div>
+            <div class="mt-6 flex items-center gap-4 text-slate-500 text-sm">
+              <a class="hover:text-slate-900" href="https://aerabi.medium.com" rel="noopener" target="_blank">Medium</a>
+              <a class="hover:text-slate-900" href="https://www.linkedin.com/in/aerabi/" rel="noopener" target="_blank"
+                >LinkedIn</a
+              >
+              <a class="hover:text-slate-900" href="https://x.com/MohammadAliEN" rel="noopener" target="_blank"
+                >X/Twitter</a
+              >
+              <a class="hover:text-slate-900" href="https://bsky.app/profile/aerabi.com" rel="noopener" target="_blank"
+                >Bluesky</a
+              >
             </div>
+          </div>
+          <div class="md:justify-self-end">
+            <div class="md:w-[420px] aspect-square rounded-full overflow-hidden shadow-2xl border border-slate-200">
+              <img
+                alt="Mohammad‑Ali A’râbi — Docker Captain headshot"
+                class="w-full h-full object-cover"
+                src="https://aerabi.com/me-red.jpeg"
+              />
+            </div>
+          </div>
         </div>
-    </div>
-
-    <!-- Brand strip -->
-    <section aria-label="Brands" class="py-10">
+      </div>
+      <!-- Brand strip -->
+      <section aria-label="Brands" class="py-10">
         <div class="max-w-6xl mx-auto px-4">
-            <div class="grid grid-cols-3 sm:grid-cols-7 gap-6 items-center opacity-80">
-                <a aria-label="Docker" class="group flex items-center justify-center" href="https://www.docker.com/captains/mohammad-ali-arabi/" rel="noopener" target="_blank">
-                    <img alt="Docker" class="h-7 transition group-hover:opacity-80" src="https://cdn.simpleicons.org/docker"/>
-                </a>
-                <a aria-label="CNCF" class="group flex items-center justify-center" href="https://community.cncf.io/cloud-native-freiburg/" rel="noopener" target="_blank">
-                    <img alt="Cloud Native Freiburg" class="h-7 transition group-hover:opacity-80" src="https://cdn.simpleicons.org/cncf"/>
-                </a>
-                <a aria-label="YouTube" class="group flex items-center justify-center" href="https://www.youtube.com/@aerabi" rel="noopener" target="_blank">
-                    <img alt="Aerabi on YouTube" class="h-7 transition group-hover:opacity-80" src="https://cdn.simpleicons.org/youtube"/>
-                </a>
-                <a aria-label="Snyk" class="group flex items-center justify-center" href="https://snyk.io/contributors/mohammad-ali-a-rabi/" rel="noopener" target="_blank">
-                    <img alt="Mohammad-Ali's Contributions on Snyk's Blog" class="h-7 transition group-hover:opacity-80" src="https://cdn.simpleicons.org/snyk"/>
-                </a>
-                <a aria-label="GitHub" class="group flex items-center justify-center" href="https://github.com/aerabi" rel="noopener" target="_blank">
-                    <img alt="GitHub" class="h-7 transition group-hover:opacity-80" src="https://cdn.simpleicons.org/github"/>
-                </a>
-                <a aria-label="Medium" class="group flex items-center justify-center" href="https://aerabi.medium.com" rel="noopener" target="_blank">
-                    <img alt="Medium" class="h-7 transition group-hover:opacity-80" src="https://cdn.simpleicons.org/medium"/>
-                </a>
-                <a aria-label="Sessionize" class="group flex items-center justify-center" href="https://sessionize.com/aerabi" rel="noopener" target="_blank">
-                    <img alt="Sessionize" class="h-7 transition group-hover:opacity-80" src="https://cdn.simpleicons.org/sessionize"/>
-                </a>
-            </div>
+          <div class="grid grid-cols-3 sm:grid-cols-7 gap-6 items-center opacity-80">
+            <a
+              aria-label="Docker"
+              class="group flex items-center justify-center"
+              href="https://www.docker.com/captains/mohammad-ali-arabi/"
+              rel="noopener"
+              target="_blank"
+            >
+              <img
+                alt="Docker"
+                class="h-7 transition group-hover:opacity-80"
+                src="https://cdn.simpleicons.org/docker"
+              />
+            </a>
+            <a
+              aria-label="CNCF"
+              class="group flex items-center justify-center"
+              href="https://community.cncf.io/cloud-native-freiburg/"
+              rel="noopener"
+              target="_blank"
+            >
+              <img
+                alt="Cloud Native Freiburg"
+                class="h-7 transition group-hover:opacity-80"
+                src="https://cdn.simpleicons.org/cncf"
+              />
+            </a>
+            <a
+              aria-label="YouTube"
+              class="group flex items-center justify-center"
+              href="https://www.youtube.com/@aerabi"
+              rel="noopener"
+              target="_blank"
+            >
+              <img
+                alt="Aerabi on YouTube"
+                class="h-7 transition group-hover:opacity-80"
+                src="https://cdn.simpleicons.org/youtube"
+              />
+            </a>
+            <a
+              aria-label="Snyk"
+              class="group flex items-center justify-center"
+              href="https://snyk.io/contributors/mohammad-ali-a-rabi/"
+              rel="noopener"
+              target="_blank"
+            >
+              <img
+                alt="Mohammad-Ali's Contributions on Snyk's Blog"
+                class="h-7 transition group-hover:opacity-80"
+                src="https://cdn.simpleicons.org/snyk"
+              />
+            </a>
+            <a
+              aria-label="GitHub"
+              class="group flex items-center justify-center"
+              href="https://github.com/aerabi"
+              rel="noopener"
+              target="_blank"
+            >
+              <img
+                alt="GitHub"
+                class="h-7 transition group-hover:opacity-80"
+                src="https://cdn.simpleicons.org/github"
+              />
+            </a>
+            <a
+              aria-label="Medium"
+              class="group flex items-center justify-center"
+              href="https://aerabi.medium.com"
+              rel="noopener"
+              target="_blank"
+            >
+              <img
+                alt="Medium"
+                class="h-7 transition group-hover:opacity-80"
+                src="https://cdn.simpleicons.org/medium"
+              />
+            </a>
+            <a
+              aria-label="Sessionize"
+              class="group flex items-center justify-center"
+              href="https://sessionize.com/aerabi"
+              rel="noopener"
+              target="_blank"
+            >
+              <img
+                alt="Sessionize"
+                class="h-7 transition group-hover:opacity-80"
+                src="https://cdn.simpleicons.org/sessionize"
+              />
+            </a>
+          </div>
         </div>
-    </section>
-    <!-- About -->
-    <section class="py-16 border-t border-slate-100 bg-slate-50/50" id="about">
+      </section>
+      <!-- About -->
+      <section class="py-16 border-t border-slate-100 bg-slate-50/50" id="about">
         <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-10">
+          <div class="md:col-span-2">
+            <h2 class="text-2xl md:text-3xl font-bold">About</h2>
+            <p class="mt-4 text-slate-700 leading-relaxed">
+              He is a Senior Backend Engineer at JobRad, a Docker Captain, Snyk Ambassador, and a CNCF community
+              organizer in Freiburg. He founded the Black Forest Docker community and has organized a dozen+ meetups and
+              workshops. His background is in mathematics and logic; he studied Pure Mathematics and researched logic
+              and programming language theory before moving full‑time into software engineering.
+            </p>
+            <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-slate-700">
+              <li class="flex items-start gap-2">
+                <span class="mt-1 h-2 w-2 rounded-full bg-slate-900"></span> CI/CD, supply‑chain security, Kubernetes,
+                developer productivity
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-1 h-2 w-2 rounded-full bg-slate-900"></span> Author of Docker and Kubernetes Security
+                (self‑published, 2025)
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-1 h-2 w-2 rounded-full bg-slate-900"></span> Speaker at WeAreDevelopers, PlatformCon,
+                Appdevcon, and more
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-1 h-2 w-2 rounded-full bg-slate-900"></span> Based in Freiburg, Germany (originally from
+                Iran)
+              </li>
+            </ul>
+          </div>
+          <aside class="md:col-span-1">
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <h3 class="font-semibold">Highlights</h3>
+              <ul class="mt-3 space-y-2 text-sm text-slate-700">
+                <li>Docker Captain</li>
+                <li>Snyk Ambassador</li>
+                <li>Cloud Native Freiburg organizer</li>
+                <li>20 years coding experience</li>
+              </ul>
+              <a
+                class="mt-4 inline-flex w-full justify-center rounded-xl bg-slate-900 text-white px-4 py-2 text-sm font-semibold hover:opacity-90"
+                href="#contact"
+                >Invite to speak</a
+              >
+            </div>
+          </aside>
+        </div>
+      </section>
+      <!-- Speaking -->
+      <section class="py-16 border-t border-slate-100" id="speaking">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-2xl md:text-3xl font-bold">Speaking &amp; Community</h2>
+          <p class="mt-3 text-slate-700 max-w-2xl">
+            He regularly speaks about Docker, Kubernetes, Git, and software supply‑chain security. He organizes Docker
+            Black Forest and CNCF Freiburg meetups.
+          </p>
+          <div class="mt-6 grid md:grid-cols-2 gap-4" id="talks"></div>
+          <div class="mt-6">
+            <a
+              class="inline-flex items-center rounded-xl border border-slate-300 px-4 py-2 text-sm hover:bg-slate-50"
+              href="https://sessionize.com/aerabi/"
+              rel="noopener"
+              target="_blank"
+              >Full talk history on Sessionize →</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- Writing -->
+      <section class="py-16 border-t border-slate-100 bg-slate-50/50" id="writing">
+        <div class="max-w-6xl mx-auto px-4">
+          <h2 class="text-2xl md:text-3xl font-bold">Writing</h2>
+          <div class="mt-4 grid md:grid-cols-3 gap-6">
             <div class="md:col-span-2">
-                <h2 class="text-2xl md:text-3xl font-bold">About</h2>
-                <p class="mt-4 text-slate-700 leading-relaxed">He is a Senior Backend Engineer at JobRad, a Docker Captain, Snyk Ambassador, and a CNCF community organizer in Freiburg. He founded the Black Forest Docker community and has organized a dozen+ meetups and workshops. His background is in mathematics and logic; he studied Pure Mathematics and researched logic and programming language theory before moving full‑time into software engineering.</p>
-                <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-slate-700">
-                    <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-slate-900"></span> CI/CD, supply‑chain security, Kubernetes, developer productivity</li>
-                    <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-slate-900"></span> Author of Docker and Kubernetes Security (self‑published, 2025)</li>
-                    <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-slate-900"></span> Speaker at WeAreDevelopers, PlatformCon, Appdevcon, and more</li>
-                    <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-slate-900"></span> Based in Freiburg, Germany (originally from Iran)</li>
+              <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <h3 class="text-xl font-semibold">Docker and Kubernetes Security</h3>
+                <p class="mt-2 text-slate-700">
+                  A practitioner’s guide to securing images, builds, and supply chains — from SBOMs and attestations to
+                  runtime hardening. Self‑publishing in 2025.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-3">
+                  <a
+                    class="inline-flex items-center rounded-xl bg-slate-900 text-white px-4 py-2 text-sm font-semibold hover:opacity-90"
+                    href="https://dockersecurity.io"
+                    rel="noopener"
+                    target="_blank"
+                    >Visit DockerSecurity.io</a
+                  >
+                  <a
+                    class="inline-flex items-center rounded-xl border border-slate-300 px-4 py-2 text-sm hover:bg-slate-50"
+                    href="https://aerabi.medium.com"
+                    rel="noopener"
+                    target="_blank"
+                    >Read articles on Medium</a
+                  >
+                </div>
+              </div>
+            </div>
+            <aside>
+              <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <h4 class="font-semibold">Newsletters</h4>
+                <ul class="mt-3 space-y-2 text-sm text-slate-700">
+                  <li>Git Weekly — deep dives &amp; tips</li>
+                  <li>Docker Hour — quick container tips</li>
                 </ul>
-            </div>
-            <aside class="md:col-span-1">
-                <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-                    <h3 class="font-semibold">Highlights</h3>
-                    <ul class="mt-3 space-y-2 text-sm text-slate-700">
-                        <li>Docker Captain</li>
-                        <li>Snyk Ambassador</li>
-                        <li>Cloud Native Freiburg organizer</li>
-                        <li>20 years coding experience</li>
-                    </ul>
-                    <a class="mt-4 inline-flex w-full justify-center rounded-xl bg-slate-900 text-white px-4 py-2 text-sm font-semibold hover:opacity-90" href="#contact">Invite to speak</a>
-                </div>
+                <a
+                  class="mt-4 inline-flex w-full justify-center rounded-xl border border-slate-300 px-4 py-2 text-sm hover:bg-slate-50"
+                  href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7237263879506935809"
+                  >Subscribe on LinkedIn</a
+                >
+              </div>
             </aside>
+          </div>
         </div>
-    </section>
-    <!-- Speaking -->
-    <section class="py-16 border-t border-slate-100" id="speaking">
+      </section>
+      <!-- Projects -->
+      <section class="py-16 border-t border-slate-100" id="projects">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-2xl md:text-3xl font-bold">Speaking &amp; Community</h2>
-            <p class="mt-3 text-slate-700 max-w-2xl">He regularly speaks about Docker, Kubernetes, Git, and software supply‑chain security. He organizes Docker Black Forest and CNCF Freiburg meetups.</p>
-            <div class="mt-6 grid md:grid-cols-2 gap-4" id="talks"></div>
-            <div class="mt-6">
-                <a class="inline-flex items-center rounded-xl border border-slate-300 px-4 py-2 text-sm hover:bg-slate-50" href="https://sessionize.com/aerabi/" rel="noopener" target="_blank">Full talk history on Sessionize →</a>
-            </div>
+          <h2 class="text-2xl md:text-3xl font-bold">Projects</h2>
+          <div class="mt-6 grid md:grid-cols-3 gap-6">
+            <article class="rounded-2xl border border-slate-200 p-6 bg-white shadow-sm">
+              <h3 class="font-semibold">Okterakt</h3>
+              <p class="mt-2 text-sm text-slate-700">Workshops &amp; consulting in DevOps and container security.</p>
+              <a
+                class="mt-3 inline-flex items-center rounded-xl border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-50"
+                href="https://okterakt.de"
+                >Learn more</a
+              >
+            </article>
+            <article class="rounded-2xl border border-slate-200 p-6 bg-white shadow-sm">
+              <h3 class="font-semibold">CVpanel</h3>
+              <p class="mt-2 text-sm text-slate-700">Job application tracking and automation for engineers.</p>
+              <a
+                class="mt-3 inline-flex items-center rounded-xl border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-50"
+                href="https://www.linkedin.com/company/cvpanel/"
+                rel="noopener"
+                target="_blank"
+                >CVpanel on LinkedIn</a
+              >
+            </article>
+            <article class="rounded-2xl border border-slate-200 p-6 bg-white shadow-sm">
+              <h3 class="font-semibold">Open Source</h3>
+              <p class="mt-2 text-sm text-slate-700">Projects like RxJSx, Mongo‑CI, and more.</p>
+              <a
+                class="mt-3 inline-flex items-center rounded-xl border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-50"
+                href="https://github.com/aerabi"
+                rel="noopener"
+                target="_blank"
+                >GitHub profile →</a
+              >
+            </article>
+          </div>
         </div>
-    </section>
-    <!-- Writing -->
-    <section class="py-16 border-t border-slate-100 bg-slate-50/50" id="writing">
+      </section>
+      <!-- Contact -->
+      <section class="py-16 border-t border-slate-100 bg-slate-50/50" id="contact">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-2xl md:text-3xl font-bold">Writing</h2>
-            <div class="mt-4 grid md:grid-cols-3 gap-6">
-                <div class="md:col-span-2">
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                        <h3 class="text-xl font-semibold">Docker and Kubernetes Security</h3>
-                        <p class="mt-2 text-slate-700">A practitioner’s guide to securing images, builds, and supply chains — from SBOMs and attestations to runtime hardening. Self‑publishing in 2025.</p>
-                        <div class="mt-4 flex flex-wrap gap-3">
-                            <a class="inline-flex items-center rounded-xl bg-slate-900 text-white px-4 py-2 text-sm font-semibold hover:opacity-90" href="https://dockersecurity.io" rel="noopener" target="_blank">Visit DockerSecurity.io</a>
-                            <a class="inline-flex items-center rounded-xl border border-slate-300 px-4 py-2 text-sm hover:bg-slate-50" href="https://aerabi.medium.com" rel="noopener" target="_blank">Read articles on Medium</a>
-                        </div>
-                    </div>
-                </div>
-                <aside>
-                    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                        <h4 class="font-semibold">Newsletters</h4>
-                        <ul class="mt-3 space-y-2 text-sm text-slate-700">
-                            <li>Git Weekly — deep dives &amp; tips</li>
-                            <li>Docker Hour — quick container tips</li>
-                        </ul>
-                        <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7237263879506935809" class="mt-4 inline-flex w-full justify-center rounded-xl border border-slate-300 px-4 py-2 text-sm hover:bg-slate-50">Subscribe on LinkedIn</a>
-                    </div>
-                </aside>
+          <h2 class="text-2xl md:text-3xl font-bold">Contact</h2>
+          <p class="mt-3 text-slate-700 max-w-2xl">
+            Want a talk, workshop, or collaboration? Reach out by email or DM.
+          </p>
+          <div class="mt-6 grid md:grid-cols-3 gap-6">
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 class="font-semibold">Email</h3>
+              <a class="mt-2 block text-slate-700 hover:text-slate-900" href="mailto:mohammad-ali@aerabi.com"
+                >mohammad-ali@aerabi.com</a
+              >
             </div>
-        </div>
-    </section>
-    <!-- Projects -->
-    <section class="py-16 border-t border-slate-100" id="projects">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-2xl md:text-3xl font-bold">Projects</h2>
-            <div class="mt-6 grid md:grid-cols-3 gap-6">
-                <article class="rounded-2xl border border-slate-200 p-6 bg-white shadow-sm">
-                    <h3 class="font-semibold">Okterakt</h3>
-                    <p class="mt-2 text-sm text-slate-700">Workshops &amp; consulting in DevOps and container security.</p>
-                    <a class="mt-3 inline-flex items-center rounded-xl border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-50" href="https://okterakt.de">Learn more</a>
-                </article>
-                <article class="rounded-2xl border border-slate-200 p-6 bg-white shadow-sm">
-                    <h3 class="font-semibold">CVpanel</h3>
-                    <p class="mt-2 text-sm text-slate-700">Job application tracking and automation for engineers.</p>
-                    <a class="mt-3 inline-flex items-center rounded-xl border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-50" href="https://www.linkedin.com/company/cvpanel/" rel="noopener" target="_blank">CVpanel on LinkedIn</a>
-                </article>
-                <article class="rounded-2xl border border-slate-200 p-6 bg-white shadow-sm">
-                    <h3 class="font-semibold">Open Source</h3>
-                    <p class="mt-2 text-sm text-slate-700">Projects like RxJSx, Mongo‑CI, and more.</p>
-                    <a class="mt-3 inline-flex items-center rounded-xl border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-50" href="https://github.com/aerabi" rel="noopener" target="_blank">GitHub profile →</a>
-                </article>
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 class="font-semibold">Social</h3>
+              <ul class="mt-2 space-y-1 text-slate-700">
+                <li>
+                  <a
+                    class="hover:text-slate-900"
+                    href="https://www.linkedin.com/in/aerabi/"
+                    rel="noopener"
+                    target="_blank"
+                    >LinkedIn</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-slate-900" href="https://x.com/MohammadAliEN" rel="noopener" target="_blank"
+                    >X/Twitter</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-slate-900" href="https://aerabi.medium.com" rel="noopener" target="_blank"
+                    >Medium</a
+                  >
+                </li>
+              </ul>
             </div>
-        </div>
-    </section>
-    <!-- Contact -->
-    <section class="py-16 border-t border-slate-100 bg-slate-50/50" id="contact">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-2xl md:text-3xl font-bold">Contact</h2>
-            <p class="mt-3 text-slate-700 max-w-2xl">Want a talk, workshop, or collaboration? Reach out by email or DM.</p>
-            <div class="mt-6 grid md:grid-cols-3 gap-6">
-                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                    <h3 class="font-semibold">Email</h3>
-                    <a class="mt-2 block text-slate-700 hover:text-slate-900" href="mailto:mohammad-ali@aerabi.com">mohammad-ali@aerabi.com</a>
-                </div>
-                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                    <h3 class="font-semibold">Social</h3>
-                    <ul class="mt-2 space-y-1 text-slate-700">
-                        <li><a class="hover:text-slate-900" href="https://www.linkedin.com/in/aerabi/" rel="noopener" target="_blank">LinkedIn</a></li>
-                        <li><a class="hover:text-slate-900" href="https://x.com/MohammadAliEN" rel="noopener" target="_blank">X/Twitter</a></li>
-                        <li><a class="hover:text-slate-900" href="https://aerabi.medium.com" rel="noopener" target="_blank">Medium</a></li>
-                    </ul>
-                </div>
-                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                    <h3 class="font-semibold">Newsletter</h3>
-                    <p class="mt-2 text-sm text-slate-700">Get updates about Docker security and the Docker Security book.</p>
-                    <!-- Replace with your ConvertKit/Kit embed -->
-                    <script async="" data-uid="cc7db28d58" src="https://dockersecurity.kit.com/cc7db28d58/index.js"></script>
-                </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 class="font-semibold">Newsletter</h3>
+              <p class="mt-2 text-sm text-slate-700">Get updates about Docker security and the Docker Security book.</p>
+              <!-- Replace with your ConvertKit/Kit embed -->
+              <script async="" data-uid="cc7db28d58" src="https://dockersecurity.kit.com/cc7db28d58/index.js"></script>
             </div>
+          </div>
         </div>
-    </section>
-    <footer class="py-10 border-t border-slate-100">
-        <div class="max-w-6xl mx-auto px-4 text-sm text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p>© <span id="year"></span> Mohammad‑Ali A’râbi. All rights reserved.</p>
-            <div class="flex items-center gap-4">
-                <a class="hover:text-slate-900" href="/imprint.html">Imprint</a>
-                <a class="hover:text-slate-900" href="/privacy.html">Privacy</a>
-            </div>
+      </section>
+      <footer class="py-10 border-t border-slate-100">
+        <div
+          class="max-w-6xl mx-auto px-4 text-sm text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4"
+        >
+          <p>© <span id="year"></span> Mohammad‑Ali A’râbi. All rights reserved.</p>
+
+          <div class="flex items-center gap-4" data-footer-social="true">
+            <a aria-label="GitHub" href="https://github.com/aerabi" rel="noopener" target="_blank">
+              <img
+                alt="GitHub"
+                class="h-5 opacity-80 hover:opacity-100 transition"
+                src="https://cdn.simpleicons.org/github"
+              />
+            </a>
+            <a aria-label="LinkedIn" href="https://www.linkedin.com/in/aerabi/" rel="noopener" target="_blank">
+              <img
+                alt="LinkedIn"
+                class="h-5 opacity-80 hover:opacity-100 transition"
+                src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg"
+              />
+            </a>
+            <a aria-label="X" href="https://x.com/MohammadAliEN" rel="noopener" target="_blank">
+              <img alt="X" class="h-5 opacity-80 hover:opacity-100 transition" src="https://cdn.simpleicons.org/x" />
+            </a>
+            <a aria-label="Bluesky" href="https://bsky.app/profile/aerabi.com" rel="noopener" target="_blank">
+              <img
+                alt="Bluesky"
+                class="h-5 opacity-80 hover:opacity-100 transition"
+                src="https://cdn.simpleicons.org/bluesky"
+              />
+            </a>
+            <a aria-label="Medium" href="https://aerabi.medium.com" rel="noopener" target="_blank">
+              <img
+                alt="Medium"
+                class="h-5 opacity-80 hover:opacity-100 transition"
+                src="https://cdn.simpleicons.org/medium"
+              />
+            </a>
+            <a aria-label="YouTube" href="https://www.youtube.com/@aerabi" rel="noopener" target="_blank">
+              <img
+                alt="YouTube"
+                class="h-5 opacity-80 hover:opacity-100 transition"
+                src="https://cdn.simpleicons.org/youtube"
+              />
+            </a>
+          </div>
+          <div class="flex items-center gap-4">
+            <a class="hover:text-slate-900" href="/imprint.html">Imprint</a>
+            <a class="hover:text-slate-900" href="/privacy.html">Privacy</a>
+          </div>
         </div>
-    </footer>
-    <!-- React App Script -->
-    <script type="text/babel">
+      </footer>
+      <!-- React App Script -->
+      <script type="text/babel">
         const talks = [
-            { title: "Docker Deep Dive: SBOMs & Attestations (Workshop)", where: "WeAreDevelopers World Congress, Berlin", when: "9 Jul 2025", url: "https://dev.to/docker/docker-deep-dive-workshop-at-wearedevelopers-110c" },
-            { title: "Bake a Docker Cake — 10 Underused Docker Features", where: "PlatformCon 2025", when: "2025", url: "https://www.youtube.com/watch?v=AdmYUHFPupE" },
-            { title: "Docker User Group Freiburg / Black Forest", where: "Organizer", when: "Ongoing", url: "https://sessionize.com/docker-meetup-freiburg/" }
+          {
+            title: "Docker Deep Dive: SBOMs & Attestations (Workshop)",
+            where: "WeAreDevelopers World Congress, Berlin",
+            when: "9 Jul 2025",
+            url: "https://dev.to/docker/docker-deep-dive-workshop-at-wearedevelopers-110c",
+          },
+          {
+            title: "Bake a Docker Cake — 10 Underused Docker Features",
+            where: "PlatformCon 2025",
+            when: "2025",
+            url: "https://www.youtube.com/watch?v=AdmYUHFPupE",
+          },
+          {
+            title: "Docker User Group Freiburg / Black Forest",
+            where: "Organizer",
+            when: "Ongoing",
+            url: "https://sessionize.com/docker-meetup-freiburg/",
+          },
         ];
 
         function TalksList() {
-            return (
-                <>
-                    {talks.map((t, i) => (
-                        <a key={i} href={t.url} className="rounded-2xl border border-slate-200 p-5 bg-white shadow-sm hover:shadow transition block">
-                            <div className="text-sm text-slate-500">{t.when} · {t.where}</div>
-                            <div className="mt-1 font-semibold">{t.title}</div>
-                        </a>
-                    ))}
-                </>
-            );
+          return (
+            <>
+              {talks.map((t, i) => (
+                <a
+                  key={i}
+                  href={t.url}
+                  className="rounded-2xl border border-slate-200 p-5 bg-white shadow-sm hover:shadow transition block"
+                >
+                  <div className="text-sm text-slate-500">
+                    {t.when} · {t.where}
+                  </div>
+                  <div className="mt-1 font-semibold">{t.title}</div>
+                </a>
+              ))}
+            </>
+          );
         }
 
-        ReactDOM.createRoot(document.getElementById('talks')).render(<TalksList />);
+        ReactDOM.createRoot(document.getElementById("talks")).render(<TalksList />);
 
         // Set copyright year
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-</section></body>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </section>
+  </body>
 </html>
