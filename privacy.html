@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — Mohammad‑Ali A’râbi</title>
+    <meta name="description" content="Privacy policy for aerabi.com (GDPR)." />
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- TailwindCSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { DEFAULT: '#0f172a' },
+                        accent: { DEFAULT: '#0ea5e9' }
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", "Helvetica Neue", "Arial", "sans-serif"],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans antialiased text-slate-900 bg-gradient-to-b from-white to-slate-50">
+<!-- Header -->
+<header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3 group">
+            <div class="w-8 h-8 rounded-full bg-slate-900 text-white grid place-items-center text-xs font-bold">MA</div>
+            <span class="font-semibold group-hover:opacity-80">Mohammad‑Ali A’râbi</span>
+        </a>
+        <nav class="text-sm">
+            <a href="/imprint.html" class="hover:opacity-70">Imprint</a>
+        </nav>
+    </div>
+</header>
+
+<main class="max-w-3xl mx-auto px-4 py-12">
+    <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">Privacy Policy</h1>
+    <p class="mt-2 text-slate-600">Information according to Art. 13, 14 GDPR.</p>
+
+    <section class="mt-8 space-y-4 text-slate-800">
+        <h2 class="text-xl font-semibold">Controller</h2>
+        <p>
+            Mohammad‑Ali A’râbi<br />
+            Freiburg im Breisgau, Germany<br />
+            E‑mail: <a class="text-accent underline" href="mailto:mohammad-ali@aerabi.com">mohammad-ali@aerabi.com</a>
+        </p>
+    </section>
+
+    <section class="mt-10 space-y-4 text-slate-800">
+        <h2 class="text-xl font-semibold">Hosting & access logs</h2>
+        <p>
+            This site may be hosted on a third‑party provider. When you access the site, your browser may transmit data such as IP address, date/time, referrer, user agent and pages viewed. These server logs are used to ensure the site’s security and proper operation and are deleted or anonymized when no longer required. The legal basis is Art. 6(1)(f) GDPR (legitimate interest in secure operation).
+        </p>
+    </section>
+
+    <section class="mt-10 space-y-4 text-slate-800">
+        <h2 class="text-xl font-semibold">Contacting me</h2>
+        <p>
+            If you contact me by e‑mail, I will process your message to respond to your inquiry. The legal basis is Art. 6(1)(b) GDPR (performance of a contract or pre‑contractual measures) or Art. 6(1)(f) GDPR (legitimate interest in responding to inquiries).
+        </p>
+    </section>
+
+    <section class="mt-10 space-y-4 text-slate-800">
+        <h2 class="text-xl font-semibold">Embedded content & external links</h2>
+        <p>
+            This website may link to external sites (e.g., LinkedIn, YouTube, Medium). When you follow these links, the respective providers are responsible for the processing of personal data on their pages. Please consult their privacy notices.
+        </p>
+    </section>
+
+    <section class="mt-10 space-y-4 text-slate-800">
+        <h2 class="text-xl font-semibold">Your rights</h2>
+        <ul class="list-disc pl-6 space-y-1">
+            <li>Right of access (Art. 15 GDPR)</li>
+            <li>Right to rectification (Art. 16 GDPR)</li>
+            <li>Right to erasure (Art. 17 GDPR)</li>
+            <li>Right to restriction of processing (Art. 18 GDPR)</li>
+            <li>Right to data portability (Art. 20 GDPR)</li>
+            <li>Right to object (Art. 21 GDPR)</li>
+        </ul>
+        <p>
+            To exercise your rights, contact: <a class="text-accent underline" href="mailto:hello@aerabi.com">hello@aerabi.com</a>.
+        </p>
+    </section>
+
+    <section class="mt-10 space-y-4 text-slate-800">
+        <h2 class="text-xl font-semibold">Changes to this policy</h2>
+        <p>
+            I may update this policy to reflect legal, technical or business developments. The updated policy will apply from its publication on this page.
+        </p>
+        <p class="text-sm text-slate-500">Last updated: <span id="updated"></span></p>
+    </section>
+
+    <div class="mt-12">
+        <a href="/" class="inline-flex items-center rounded-xl border border-slate-300 px-4 py-2 text-sm hover:bg-slate-50">← Back to homepage</a>
+    </div>
+</main>
+
+<footer class="py-10 border-t border-slate-100">
+    <div class="max-w-5xl mx-auto px-4 text-sm text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>© <span id="year"></span> Mohammad‑Ali A’râbi</p>
+        <a href="/imprint.html" class="hover:text-slate-900">Imprint</a>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('updated').textContent = new Date().toISOString().slice(0, 10);
+</script>
+</body>
+</html>
